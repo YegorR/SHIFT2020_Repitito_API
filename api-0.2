@@ -11,8 +11,9 @@ POST /login
 Ответ:
 {
 	"successful" : true // true, если авторизация успешная, false, если нет
+	"token" : "u123kf" 
 }
-При успешной авторизациии в куки кладётся значения ACCESS_TOKEN. Для всех дальнейших операций требуется ACCESS_TOKEN,
+Для всех дальнейших операций требуется token в http заголовке Authorization,
 иначе код возврата 401 - Unauthorized (кроме POST /user)
 
 GET /user - получить список пользователей 
